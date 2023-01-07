@@ -21,5 +21,5 @@ app.use(bodyParser.json());
 
 
 app.use(express.static("public"));
-// listen port
+
 app.listen(port,()=>console.log("listening server",port));  
