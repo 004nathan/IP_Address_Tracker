@@ -3,7 +3,7 @@ const { response } = require('express');
 const express = require('express');
 const app = express();
 
-const port = 5093;  
+const port = 5095;  
 const database = require('mysql');
 //  connect to database
 let connection = database.createConnection({
@@ -18,8 +18,6 @@ res.render("index");
 })
 var urlencodedParser = bodyParser.urlencoded({extended:false});
 app.use(bodyParser.json());
-
-
 app.use(express.static("public"));
 // listen port
 app.listen(port,()=>console.log("listening server",port));  
