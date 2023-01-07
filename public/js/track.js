@@ -1,6 +1,10 @@
 
 const ipTracker = function(){
-    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xeQAeD1u5J&ipAddress=8.8.8.8`).then(function (response){
+
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xeQAeD1u5J&ipAddress=8.8.8.8`)
+    .then(function (response){
+
+
       console.log(response);
       console.log(response.url);
       return response.json();
