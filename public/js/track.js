@@ -20,4 +20,18 @@ const ipTracker = function(){
     })
   }
   ipTracker();
+  const getMap = (lat, lng) => {
+    let mapOptions = {
+      center: [lat, lng],
+      zoom: 10,
+    };
+    map = new L.map("map", mapOptions);
+    let layer = new L.TileLayer(
+      "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    );
+    let marker = new L.marker([lat, lng]).addTo(map);
+    map.addLayer(layer);
+  };
+
+  console.log(getMap(37.38605,-122.08385));
 

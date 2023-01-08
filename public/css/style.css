@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #whole-container{
+      height:100%;
+      width:100%;
+      background-color:white;
+    position: absolute;
+    
+  }
+  #header{
+      height:25%;
+      width:100%;
+    background-image: url('pattern-bg.png');
+    background-repeat:no-repeat;
+    margin-left: 10%;
+  }
+  h1{
+    
+    margin-left:33%;
+   color: white;
+   
+  }
+  #search-bar{
+    height:10%; 
+    width:32%; 
+    font-size: 35px;
+    margin-left:25%;
+    border-radius: 15px;
+  
+  }
+  #arrow-icon{
+    background-color: black;
+    height:40px;
+    width:40px;
+    margin-top:5%; 
+    margin-top: 10%; 
+  }
+  #content{
+    height:270%;
+    width:78.5%;
+    border:1px solid black;
+    margin-top:5%;
+  
+  }
+  
+  
