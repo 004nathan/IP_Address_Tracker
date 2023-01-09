@@ -1,5 +1,5 @@
-var  mapContainer =   document.getElementById("map");
-let ipAddress="1.6.0.0";
+var  mapContainer = document.getElementById("map");
+let ipAddress="49.204.120.71";
 window.addEventListener("load", (event) => {
     ipTracker(ipAddress);
     });
@@ -11,8 +11,8 @@ fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xe
       console.log(response.url);
       return response.json();
     }).then(function(response){
-      mapContainer.innerHTML = "";
-       mapContainer.innerHtml=getMap(response.location.lat,response.location.lng);
+        console.log(response)
+       mapContainer.innerHTML= getMap(response.location.lat,response.location.lng);
     }).catch(err =>{
         console.log(`ip address not found${err}`)
       })
@@ -26,7 +26,7 @@ fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xe
       center: [lat, lng],
       zoom: 10,
     };
-    map = new L.map("map", mapOptions);
+    let map = new L.map("map", mapOptions);
     let layer = new L.TileLayer(
       "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     );
