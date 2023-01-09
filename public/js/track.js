@@ -1,5 +1,5 @@
 var  mapContainer = document.getElementById("map");
-let ipAddress="49.204.120.71";
+let ipAddress="1.6.0.0";
 window.addEventListener("load", (event) => {
     ipTracker(ipAddress);
     });
@@ -20,7 +20,6 @@ fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xe
       console.log("Api calling finished")
     })
   }
-  ipTracker();
   const getMap = (lat, lng) => {
     let mapOptions = {
       center: [lat, lng],
@@ -34,5 +33,4 @@ fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xe
     map.addLayer(layer);
   };
 
-  console.log(getMap(37.38605,-122.08385));
-
+ 
