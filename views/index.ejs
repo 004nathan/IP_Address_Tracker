@@ -6,10 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ip address tracker</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <script src="js/track.js"></script>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
 </head>
 <body>
-    <h1>Hello</h1>
-    <img src=""/>
+    <div id="whole-container">
+        <div id="header">
+           <img src="Assets/pattern-bg.png" id="bg_Image"/>
+           <div id="headerDiv">
+            <h1>IP Address Tracker</h1>
+            <input type="text" placeholder="Search for any IP address or domain..." id="search-bar"/> 
+            <div onclick="getIP()" id="arrow_div">
+             <img src="Assets/icon-arrow.svg"  id="arrow_svg"/> 
+             </div>
+           </div>
+           <div id="ip_addressDiv">
+            <div id="ipAddress">
+                <p id="ipAddreesText"></p>
+                <h3 id="ipAddress_Value"> 
+
+                </h3>
+            </div>
+            <div id="location">
+                <p id="location_txt"></p>
+                <h3 id="loc_value"></h3>
+            </div>
+            <div id="timeZone">
+                <p id="time_txt"></p>
+                <h3 id="time_value"></h3>
+            </div>
+            <div id="isp">
+                <p id="isp_txt"></p>
+                <h3 id="isp_value"></h3>
+            </div>
+           </div>
+           
+          <div id="map"></div>
+        
+    </div>
+    <script src="js/track.js"></script>
 </body>
 </html>
