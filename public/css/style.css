@@ -46,21 +46,21 @@ color: #FFFFFF;
   }
   #search-bar{
     position: absolute;
-width: 555px;
-height: 58px;
-left: 620px;
-top: 114px;
-font-family: 'Rubik';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 21px;
-color: #2C2C2C;
-text-align: left;
-/* mix-blend-mode: normal; */
-/* opacity: 0.5; */
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;
+    width: 555px;
+    height: 58px;
+    left: 1%;
+    top: 7%;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2C2C2C;
+    text-align: left;
+    /* mix-blend-mode: normal; */
+    /* opacity: 0.5; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
   #arrow-icon{
     background-color: black;
@@ -82,8 +82,8 @@ border-bottom-left-radius: 10px;
     background-color: #2C2C2C;
     height: 63px;
     width: 58px;
-    left:61%;
-top: 114px;
+    left:89.5%;
+top:8.1%;
 border-top-right-radius: 10px;
 border-bottom-right-radius: 10px;
   }
@@ -101,7 +101,18 @@ width:800px;
 background-color: #ed0e0e;
 
     } */
+#searchBox{
+    position: absolute;
+    height: 10%;
+    width: 33%;
+    margin-top: -8%;
+    margin-left: 34%;
+}
 
-
-  
+#ip_addressDiv{
+    width: 40%;
+    height: 20%;
+    background: black;
+    position: absolute;
+} 
   
