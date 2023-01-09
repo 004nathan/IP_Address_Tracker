@@ -1,17 +1,18 @@
-
-const ipTracker = function(){
-
-    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xeQAeD1u5J&ipAddress=8.8.8.8`)
+var  mapContainer =   document.getElementById("map");
+let ipAddress="1.6.0.0";
+window.addEventListener("load", (event) => {
+    ipTracker(ipAddress);
+    });
+    // get country details from ipaddress api
+const ipTracker = function(ipAddress){
+fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xeQAeD1u5J&ipAddress=${ipAddress}`)
     .then(function (response){
       console.log(response);
       console.log(response.url);
       return response.json();
     }).then(function(response){
-        console.log(response)
-        console.log(response.location.region);
-        console.log(response.location.lat);
-        console.log(response.location.lng);
-        
+      mapContainer.innerHTML = "";
+       mapContainer.innerHtml=getMap(response.location.lat,response.location.lng);
     }).catch(err =>{
         console.log(`ip address not found${err}`)
       })
@@ -19,7 +20,7 @@ const ipTracker = function(){
       console.log("Api calling finished")
     })
   }
-  ipTracker();
+  // get map from latitude and longtitude
   const getMap = (lat, lng) => {
     let mapOptions = {
       center: [lat, lng],
@@ -32,6 +33,12 @@ const ipTracker = function(){
     let marker = new L.marker([lat, lng]).addTo(map);
     map.addLayer(layer);
   };
-
-  console.log(getMap(37.38605,-122.08385));
+  //call getip method
+function getIP(){
+  ipAddress =document.getElementById("search-bar").value;
+    if(ipAddress!=" " && ipAddress!=undefined && ipAddress!=null){
+       ipTracker(ipAddress);
+    }
+}
+  
 
