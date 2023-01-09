@@ -20,25 +20,19 @@ fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_q6vTjgcPP0sVPqJII09xe
       console.log("Api calling finished")
     })
   }
-  // get map from latitude and longtitude
+  ipTracker();
   const getMap = (lat, lng) => {
     let mapOptions = {
       center: [lat, lng],
       zoom: 10,
     };
-    let map = new L.map("map", mapOptions);
+    map = new L.map("map", mapOptions);
     let layer = new L.TileLayer(
       "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     );
     let marker = new L.marker([lat, lng]).addTo(map);
     map.addLayer(layer);
   };
-  //call getip method
-function getIP(){
-  ipAddress =document.getElementById("search-bar").value;
-    if(ipAddress!=" " && ipAddress!=undefined && ipAddress!=null){
-       ipTracker(ipAddress);
-    }
-}
-  
+
+  console.log(getMap(37.38605,-122.08385));
 
